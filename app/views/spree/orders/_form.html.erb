@@ -1,7 +1,7 @@
 <% order = order_form.object %>
 <%= render 'spree/shared/error_messages', target: order %>
 <table id="cart-detail" data-hook>
-  <thead>
+  <thead style="background-color: #ececec;">
     <tr data-hook="cart_items_headers">
       <th class="cart-item-description-header" colspan="2"><%= Spree.t(:item) %></th>
       <th class="cart-item-price-header"><%= Spree.t(:price) %></th>

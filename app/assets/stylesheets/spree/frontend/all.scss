@@ -1,0 +1,37 @@
+@import "materialize";
+
+li {
+  display: inline;
+}
+
+#link-to-cart {
+  float: right;
+}
+
+.brand-logo {
+  margin-left: 70px;
+}
+
+.card-image-small {
+  width: 40px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+td.cart-item-image {
+  width: 100px;
+}
+
+td.cart-item-description {
+  width: 190px;
+}
+
+.light-blue.lighten-1 {
+  background-color: #29b6f6 !important;
+}

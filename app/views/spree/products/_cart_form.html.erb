@@ -49,8 +49,10 @@
         </div>
 
         <div class="add-to-cart">
-          <%= number_field_tag :quantity, 1, class: 'title', min: 1 %>
-          <%= button_tag class: 'large primary', id: 'add-to-cart-button', type: :submit do %>
+          <div class="input-field col s6">
+            <%= number_field_tag :quantity, 1, class: 'validate', min: 1 %>
+          </div>
+          <%= button_tag class: 'btn waves-effect waves-light', type: :submit do %>
             <%= Spree.t(:add_to_cart) %>
           <% end %>
         </div>
