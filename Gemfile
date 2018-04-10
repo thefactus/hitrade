@@ -37,6 +37,8 @@ gem 'deface'
 gem 'pg'
 gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
 gem 'materialize-sass', '~> 1.0.0.beta'
+gem 'solidus_editor', github: 'solidusio-contrib/solidus_editor', branch: 'master'
+gem 'activesupport', '~> 5.1.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
