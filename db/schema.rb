@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180323172503) do
+ActiveRecord::Schema.define(version: 20180410162851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -168,7 +168,6 @@ ActiveRecord::Schema.define(version: 20180323172503) do
   create_table "spree_inventory_units", id: :serial, force: :cascade do |t|
     t.string "state"
     t.integer "variant_id"
-    t.integer "order_id"
     t.integer "shipment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -177,7 +176,6 @@ ActiveRecord::Schema.define(version: 20180323172503) do
     t.integer "carton_id"
     t.index ["carton_id"], name: "index_spree_inventory_units_on_carton_id"
     t.index ["line_item_id"], name: "index_spree_inventory_units_on_line_item_id"
-    t.index ["order_id"], name: "index_inventory_units_on_order_id"
     t.index ["shipment_id"], name: "index_inventory_units_on_shipment_id"
     t.index ["variant_id"], name: "index_inventory_units_on_variant_id"
   end
@@ -1030,9 +1028,11 @@ ActiveRecord::Schema.define(version: 20180323172503) do
     t.string "meta_description"
     t.string "meta_keywords"
     t.integer "depth"
+    t.index ["lft"], name: "index_spree_taxons_on_lft"
     t.index ["parent_id"], name: "index_taxons_on_parent_id"
     t.index ["permalink"], name: "index_taxons_on_permalink"
     t.index ["position"], name: "index_spree_taxons_on_position"
+    t.index ["rgt"], name: "index_spree_taxons_on_rgt"
     t.index ["taxonomy_id"], name: "index_taxons_on_taxonomy_id"
   end
 
