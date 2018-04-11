@@ -23,6 +23,13 @@ GIT
       solidus_core (>= 1.1, < 3)
       solidus_support
 
+GIT
+  remote: https://github.com/solidusio-contrib/solidus_log_viewer.git
+  revision: d011e526e8a89feb22b26c2d84a5ebfd76f59644
+  specs:
+    solidus_log_viewer (1.0.0)
+      solidus_backend (>= 1.3, < 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -397,6 +404,7 @@ DEPENDENCIES
   solidus_auth_devise
   solidus_editor!
   solidus_i18n!
+  solidus_log_viewer!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
